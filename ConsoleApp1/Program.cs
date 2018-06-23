@@ -24,7 +24,7 @@ namespace ConsoleApp1
         public static void PlayAgain()
         {
             Console.WriteLine("Do you want to play again? Y/n ");
-            string again = Console.ReadLine();
+            string again = Console.ReadLine().ToLower();
             if (again == "y")
             { 
                 Console.Clear();
@@ -87,7 +87,7 @@ namespace ConsoleApp1
                     }
                     else
                     {
-                        Console.WriteLine("{0} was wrong!", guess);
+                        Console.WriteLine("{0} was wrong!\r\n", guess);
                         numberGuesses++;
                     }
                 }
@@ -102,7 +102,7 @@ namespace ConsoleApp1
             if (numberGuesses == 3)
             {
                 Console.Clear();
-                Console.WriteLine("Sorry, you lost. The correct number was {0}", number);
+                Console.WriteLine("Sorry, you lost. The correct number was {0}\r\n", number);
                 PlayAgain();
             }
 
